@@ -1,0 +1,7 @@
+graph TD
+    User[User Command] --> VLA[VLA Model (The Mind)]
+    Camera[Sim Camera] --> VLA
+    VLA -->|JSON Plan| Agent[ROS 2 Agent Node]
+    Agent -->|Velocity Cmd| Bridge[ROS 2 Bridge]
+    Bridge -->|USD Action| Sim[Isaac Sim (The Body)]
+    Sim -->|Image Data| Camera
